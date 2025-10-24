@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Movie } from '../core/services/movie';
+import { MovieCardModel } from '../shared/models/MovieCardModel';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +9,20 @@ import { Component } from '@angular/core';
   styleUrl: './home.css'
 })
 export class Home {
+  movies !: MovieCardModel[] ;
 
+  constructor(private movieService: Movie) {
+   }
+
+   ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    console.log("Home component initialized");
+    this.movieService.getTopGrossingMovies().subscribe(m => {
+      this.movies = m;
+      console.log("Movies received ", this.movies);
+    });
+     
+    
+   }
 }
