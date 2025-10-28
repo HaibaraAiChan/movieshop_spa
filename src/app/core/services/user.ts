@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class User {
-  getUserPurchasedMovies(userId: number){
+  getUserPurchasedMovies(){
   }
-  getUserFavoritedMovies(userId: number){
+  getUserFavoritedMovies(){
   }
-  getUserReviewedMovies(userId: number){
+  getUserReviewedMovies(){
   }
-  purchaseMovie(userId: number, movieId: number){
+  purchaseMovie(){
   }
 }

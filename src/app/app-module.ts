@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './home/home';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared-module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
