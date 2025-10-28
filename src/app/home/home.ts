@@ -20,7 +20,7 @@ export class Home {
     console.log("Home component initialized");
     this.movieService.getTopGrossingMovies().subscribe(m => {
       this.movies = m;
-      console.log("Movies received ", this.movies);
+      console.table(this.movies);
     });
      
     

@@ -18,5 +18,7 @@ export class Movie {
   }
   getMovieDetails(id: number){ // int id
   }
+  getMoviesByGenre(genreId: number){ // int genreId
+  }
 }
 
